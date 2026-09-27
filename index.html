@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathias Gabriel Apfel · CV</title>
+<meta name="description" content="Currículum de Mathias Gabriel Apfel, desarrollador de aplicaciones multiplataforma.">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1419; --panel:#161c23; --line:#252d37; --text:#d9dee4; --muted:#8a96a3;
+    --accent:#4fd1a5; --accent2:#f0b35a; --kw:#c792ea; --str:#a5d6a7; --fill:#ffe066;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:40px 20px 60px}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .fill{background:var(--fill);color:#222;padding:0 4px;border-radius:3px;font-weight:600}
+
+  /* Cabecera tipo editor */
+  .editor{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .tabs{display:flex;gap:6px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);background:#12181e}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .tab{margin-left:10px;font-size:13px;color:var(--muted)}
+  .code{padding:26px 24px;font-size:15px;overflow-x:auto}
+  .code .ln{display:block;white-space:pre}
+  .kw{color:var(--kw)} .ty{color:var(--accent2)} .st{color:var(--str)} .cm{color:#5f6b78}
+
+  .hero{display:flex;gap:28px;align-items:center;margin-top:28px;flex-wrap:wrap}
+  .avatar{width:96px;height:96px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#2b7a78);
+          display:grid;place-items:center;font:700 34px "JetBrains Mono",monospace;color:#0f1419;flex-shrink:0}
+  h1{font-size:34px;line-height:1.15}
+  .role{color:var(--accent);font-family:"JetBrains Mono",monospace;font-size:15px;margin-top:4px}
+  .contact{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:14px;color:var(--muted)}
+
+  section{margin-top:44px}
+  h2{font-family:"JetBrains Mono",monospace;font-size:14px;letter-spacing:.08em;text-transform:uppercase;
+     color:var(--accent2);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+  .card h3{font-size:16px}
+  .meta{font-size:13px;color:var(--muted);font-family:"JetBrains Mono",monospace;margin:2px 0 8px}
+  .card p,.card li{font-size:14px}
+  .card ul{padding-left:18px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .tag{font:500 12px "JetBrains Mono",monospace;padding:3px 8px;border-radius:5px;background:#1f2a33;color:var(--accent)}
+
+  .skill{margin-bottom:12px}
+  .skill .row{display:flex;justify-content:space-between;font-size:14px}
+  .bar{height:6px;background:#1f2a33;border-radius:4px;margin-top:4px;overflow:hidden}
+  .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#2b9f8a)}
+
+  .timeline{border-left:2px solid var(--line);padding-left:20px}
+  .item{position:relative;margin-bottom:22px}
+  .item::before{content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;
+                background:var(--bg);border:2px solid var(--accent)}
+
+  .actions{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{font:600 13px "JetBrains Mono",monospace;padding:9px 14px;border-radius:8px;border:1px solid var(--accent);
+       background:transparent;color:var(--accent);cursor:pointer}
+  .btn:hover{background:var(--accent);color:var(--bg)}
+  footer{margin-top:56px;text-align:center;font-size:12px;color:var(--muted)}
+
+  @media (max-width:600px){ h1{font-size:28px} .code{font-size:13px} }
+
+  /* Versión para imprimir / guardar como PDF */
+  @media print{
+    :root{--bg:#fff;--panel:#fff;--line:#ddd;--text:#111;--muted:#555;--accent:#1f7a63;--accent2:#9a5b00}
+    .editor,.actions,footer{display:none}
+    .wrap{padding:0;max-width:none}
+    section{margin-top:18px;break-inside:avoid}
+    .card{padding:10px}
+    .fill{background:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Elemento creativo: presentación como código -->
+  <div class="editor mono" aria-hidden="true">
+    <div class="tabs">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="tab">Candidato.java</span>
+    </div>
+    <div class="code">
+<span class="ln"><span class="kw">public class</span> <span class="ty">Candidato</span> {</span>
+<span class="ln">    <span class="kw">String</span> nombre   = <span class="st">"Mathias Gabriel Apfel"</span>;</span>
+<span class="ln">    <span class="kw">String</span> perfil   = <span class="st">"Desarrollador de aplicaciones multiplataforma"</span>;</span>
+<span class="ln">    <span class="kw">String</span>[] stack  = { <span class="st">"Java"</span>, <span class="st">"Android"</span>, <span class="st">"SQL"</span>, <span class="st">"PL/SQL"</span>, <span class="st">"PHP"</span> };</span>
+<span class="ln">    <span class="kw">boolean</span> disponible = <span class="kw">true</span>; <span class="cm">// listo para incorporarme a RADEL S.A.</span></span>
+<span class="ln">}</span>
+    </div>
+  </div>
+
+  <!-- Datos personales y de contacto -->
+  <header class="hero">
+    <div class="avatar">MA</div>
+    <div>
+      <h1>Mathias Gabriel Apfel</h1>
+      <div class="role">&gt; Desarrollador junior de aplicaciones multiplataforma</div>
+      <div class="contact">
+        <span>📍 Santa Margarida i els Monjos (Barcelona)</span>
+        <span>📞 <a href="tel:+34644309664">644 30 96 64</a></span>
+        <span>✉️ <a href="mailto:mathias.g.apfel@gmail.com">mathias.g.apfel@gmail.com</a></span>
+        <span>💼 <a href="https://www.linkedin.com/in/mathias-apfel-1b9853333" target="_blank">LinkedIn</a></span>
+        <span>🐙 <a href="https://github.com/mgapfel" target="_blank">github.com/mgapfel</a></span>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="window.print()">⬇ Descargar en PDF</button>
+        <a class="btn" href="#proyectos">Ver proyectos</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p>Estudiante de segundo curso del CFGS de Desarrollo de Aplicaciones Multiplataforma. Me gusta aprender construyendo proyectos reales, desde aplicaciones Android hasta bases de datos. Mi experiencia en logística me ha dado organización, autonomía y capacidad para resolver problemas bajo presión.</p>
+  </section>
+
+  <!-- Competencias -->
+  <section>
+    <h2>Competencias</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Técnicas</h3>
+        <div class="meta">lenguajes · bases de datos · entornos</div>
+        <div class="skill"><div class="row"><span>Java</span><span class="mono">▰▰▰▰▱</span></div><div class="bar"><span style="width:80%"></span></div></div>
+        <div class="skill"><div class="row"><span>SQL · PL/SQL (Oracle, PostgreSQL)</span><span class="mono">▰▰▰▰▱</span></div><div class="bar"><span style="width:80%"></span></div></div>
+        <div class="skill"><div class="row"><span>Android (Android Studio)</span><span class="mono">▰▰▰▱▱</span></div><div class="bar"><span style="width:60%"></span></div></div>
+        <div class="skill"><div class="row"><span>MongoDB</span><span class="mono">▰▰▰▱▱</span></div><div class="bar"><span style="width:60%"></span></div></div>
+        <div class="skill"><div class="row"><span>PHP · HTML · JavaScript</span><span class="mono">▰▰▰▱▱</span></div><div class="bar"><span style="width:55%"></span></div></div>
+        <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">JavaFX</span></div>
+      </div>
+      <div class="card">
+        <h3>Personales</h3>
+        <div class="meta">soft skills</div>
+        <ul>
+          <li>Autonomía y proactividad</li>
+          <li>Resolución de problemas bajo presión</li>
+          <li>Trabajo en equipo</li>
+          <li>Organización y cumplimiento de plazos</li>
+          <li>Aprendizaje autodidacta</li>
+        </ul>
+        <h3 style="margin-top:14px">Idiomas</h3>
+        <div class="tags">
+          <span class="tag">Español · C1</span>
+          <span class="tag">Catalán · C1</span>
+          <span class="tag">Inglés · B2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Calculadora Android</h3>
+        <div class="meta">Android Studio · Java</div>
+        <p>Aplicación móvil de calculadora con interfaz propia, desarrollada durante el ciclo.</p>
+        <div class="tags"><span class="tag">móvil</span><span class="tag">interfaces</span></div>
+      </div>
+      <div class="card">
+        <h3>TutorMatch</h3>
+        <div class="meta">JavaFX · PostgreSQL</div>
+        <p>Aplicación de escritorio con interfaz gráfica y base de datos relacional.</p>
+        <div class="tags"><span class="tag">escritorio</span><span class="tag">bases de datos</span></div>
+      </div>
+      <div class="card">
+        <h3>PantanosCatalunya</h3>
+        <div class="meta">Java · MongoDB · JFreeChart</div>
+        <p>Aplicación que consulta datos de los embalses de Cataluña y los muestra en gráficos.</p>
+        <div class="tags"><span class="tag">NoSQL</span><span class="tag">visualización</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formación -->
+  <section>
+    <h2>Formación</h2>
+    <div class="timeline">
+      <div class="item">
+        <h3>CFGS Desarrollo de Aplicaciones Multiplataforma</h3>
+        <div class="meta">Institut Eugeni d'Ors · Vilafranca del Penedès · <span class="fill">[año inicio]</span> – actualidad</div>
+        <p>Programación, bases de datos, desarrollo de interfaces, programación multimedia y dispositivos móviles.</p>
+      </div>
+      <div class="item">
+        <h3><span class="fill">[Estudios anteriores]</span></h3>
+        <div class="meta"><span class="fill">[Centro · año]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section>
+    <h2>Experiencia laboral</h2>
+    <div class="timeline">
+      <div class="item">
+        <h3><span class="fill">[Puesto]</span> · ID Logistics</h3>
+        <div class="meta">Sector logístico · <span class="fill">[fechas]</span></div>
+        <p><span class="fill">[Funciones principales]</span></p>
+      </div>
+      <div class="item">
+        <h3><span class="fill">[Puesto]</span> · Privalia</h3>
+        <div class="meta">Sector logístico · <span class="fill">[fechas]</span></div>
+        <p><span class="fill">[Funciones principales]</span></p>
+      </div>
+      <div class="item">
+        <h3><span class="fill">[Puesto]</span> · Caprabo</h3>
+        <div class="meta">Sector logístico · <span class="fill">[fechas]</span></div>
+        <p><span class="fill">[Funciones principales]</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aficiones -->
+  <section>
+    <h2>Aficiones</h2>
+    <div class="grid">
+      <div class="card"><h3>🤖 Robot con Raspberry Pi</h3><p>Construyo y programo un robot con ruedas como proyecto personal.</p></div>
+      <div class="card"><h3>💻 Proyectos en GitHub</h3><p>Publico mis proyectos de aprendizaje y los que tengo en curso.</p></div>
+      <div class="card"><h3><span class="fill">[Otra afición]</span></h3><p><span class="fill">[Relación con el puesto]</span></p></div>
+    </div>
+  </section>
+
+  <footer class="mono">// hecho a mano en HTML y CSS · publicado en GitHub Pages</footer>
+</div>
+</body>
+</html>
